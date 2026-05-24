@@ -1,0 +1,15 @@
+__pycache__
+*.pyc
+*.pyo
+.git
+.gitignore
+.venv
+venv
+.env
+.claude
+openspec
+*.xml
+xccdf-results-*.xml
+README.md
+CLAUDE.md
+server.py

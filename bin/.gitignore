@@ -1,0 +1,4 @@
+# Binary files are extracted at Docker build time via multi-stage build.
+# Do not commit them to git.
+oscap-static-x86_64
+oscap-static-aarch64

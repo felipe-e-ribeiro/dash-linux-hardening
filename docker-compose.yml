@@ -1,0 +1,21 @@
+services:
+  openscap-dashboard:
+    build: .
+    image: openscap-dashboard:latest
+    container_name: openscap-dashboard
+    ports:
+      - "8765:8765"
+    volumes:
+      # Mount the host NFS path here; align with NFS_MOUNT_PATH below.
+      - /mnt/nfs:/mnt/nfs
+      # Persistent data: SSH keys, SSG cache, targets registry.
+      - openscap_data:/data
+    environment:
+      NFS_MOUNT_PATH: /mnt/nfs
+    env_file:
+      # Place AWS_ACCESS_KEY_ID / AWS_SECRET_ACCESS_KEY / AWS_DEFAULT_REGION here.
+      - .env
+    restart: unless-stopped
+
+volumes:
+  openscap_data:

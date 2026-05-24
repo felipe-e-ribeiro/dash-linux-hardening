@@ -1,0 +1,7 @@
+.claude/
+openspec/
+CLAUDE.md
+.venv/
+__pycache__/
+error.txt
+xccdf-results-*.xml
