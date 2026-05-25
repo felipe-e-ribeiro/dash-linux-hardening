@@ -4,3 +4,4 @@ paramiko>=3.0
 apscheduler>=3.10
 cryptography>=41.0
 requests>=2.31
+pytest>=8.0
